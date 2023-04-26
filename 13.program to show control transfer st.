@@ -1,5 +1,4 @@
 BREAK:
-
 for i in range(10):
     print(i)
     if i == 5:
@@ -13,7 +12,6 @@ OUTPUT:
 5
 
 CONTINUE:
-
 for var in "Geeksforgeeks":
     if var == "g":
         continue
@@ -33,7 +31,6 @@ k
 s
 
 PASS:
-
 list =['a', 'b', 'c', 'd']
  for i in list:
     if(i =='a'):
