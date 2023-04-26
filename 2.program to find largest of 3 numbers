@@ -9,3 +9,9 @@ elif b>c:
 else:
     largest=c
 print(largest,"is largest of three number.")
+
+output:
+enter first nummber:2
+enter second nummber:3
+enter third nummber:5
+5 is largest of three number.
