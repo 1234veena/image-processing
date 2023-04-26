@@ -1,5 +1,5 @@
 row = 5
-m = (2 * size) - 2
+m = (2 * row) - 2
 for i in range(0, row):
     for j in range(0, m):
         print(end=" ")
@@ -7,3 +7,10 @@ for i in range(0, row):
     for j in range(0, i + 1):
         print("* ", end=' ')
     print(" ")
+    
+output:
+        *   
+       *  *   
+      *  *  *   
+     *  *  *  *   
+    *  *  *  *  *   
