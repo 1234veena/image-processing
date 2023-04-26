@@ -1,0 +1,46 @@
+BREAK:
+
+for i in range(10):
+    print(i)
+    if i == 5:
+        break
+OUTPUT:
+0
+1
+2
+3
+4
+5
+
+CONTINUE:
+
+for var in "Geeksforgeeks":
+    if var == "g":
+        continue
+    print(var)
+output:
+G
+e
+e
+k
+s
+f
+o
+r
+e
+e
+k
+s
+
+PASS:
+
+list =['a', 'b', 'c', 'd']
+ for i in list:
+    if(i =='a'):
+        pass
+    else:
+        print(i)
+ output:
+b
+c
+d
