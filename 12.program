@@ -1,5 +1,4 @@
 INPUT:
-
 x = input('Enter your name:')
 print('Hello, ' , x)
 OUTPUT:
@@ -7,27 +6,22 @@ Enter your name:veena
 Hello,  veena
 
 PRINT:
-
 print("Hello World")
 OUTPUT:
 Hello World
 
 SEP:
-
 print('09','12','2016', sep='/')
 OUTPUT:
 09/12/2016
 
 END:
-
 print("Hello world," , end = ' ') 
 print("MY NAME IS VEENA", end = ' ')
 OUTPUT:
 Hello world, MY NAME IS VEENA 
 
-
 REPLACE:
-
 txt = "I like bananas"
 x = txt.replace("bananas", "apples")
 print(x)
