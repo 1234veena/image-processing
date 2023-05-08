@@ -21,3 +21,9 @@ cv2.imshow('image',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 output:image
+
+
+Displaying image by pillow library
+from PIL import Image
+image=Image.open('C:/Users/User/Documents/Python Scripts/jerry.jpg')
+image.show()
