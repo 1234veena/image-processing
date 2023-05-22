@@ -1,0 +1,44 @@
+GRAYSCALE IMAGE
+
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+
+img = cv2.imread('C:/Users/User/Downloads/gs.jpg')
+color = ('b','g','r')
+for i,col in enumerate(color):
+    histr = cv2.calcHist([img],[i],None,[256],[0,256])
+    plt.plot(histr,color = col)
+    plt.xlim([0,256])
+plt.show()
+OUTPUT:IMAGE 1 COLOR
+
+RGB IMAGE
+
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+
+img = cv2.imread('C:/Users/User/Downloads/cat.jpg')
+color = ('b','g','r')
+for i,col in enumerate(color):
+    histr = cv2.calcHist([img],[i],None,[256],[0,256])
+    plt.plot(histr,color = col)
+    plt.xlim([0,256])
+plt.show()
+OUTPUT:IMAGE 3 COLOR
+
+BINARY IMAGE
+
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+
+img = cv2.imread('C:/Users/User/Downloads/binary.jpg')
+color = ('b','g','r')
+for i,col in enumerate(color):
+    histr = cv2.calcHist([img],[i],None,[256],[0,256])
+    plt.plot(histr,color = col)
+    plt.xlim([0,256])
+plt.show()
+OUTPUT:IMAGE 2 COLOR
