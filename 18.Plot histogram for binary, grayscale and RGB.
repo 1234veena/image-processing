@@ -42,3 +42,29 @@ for i,col in enumerate(color):
     plt.xlim([0,256])
 plt.show()
 OUTPUT:IMAGE 2 COLOR
+
+
+FOR BLOCKS:
+RGB
+
+from matplotlib import pyplot as plt
+img = plt.imread('C:/Users/User/Downloads/cat.jpg')
+plt.hist(img.flatten(), bins=[-.5,.5,1.5], ec="k")
+plt.xticks((0,1))
+plt.show()
+
+BINARY
+
+from matplotlib import pyplot as plt
+img = plt.imread('C:/Users/User/Downloads/binary.jpg')
+plt.hist(img.flatten(), bins=[-.5,.5,1.5], ec="k")
+plt.xticks((0,1))
+plt.show()
+
+GRAYSCALE
+
+from matplotlib import pyplot as plt
+img = plt.imread('C:/Users/User/Downloads/gs.jpg')
+plt.hist(img.flatten(), bins=[-.5,.5,1.5], ec="k")
+plt.xticks((0,1))
+plt.show()
