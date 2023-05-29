@@ -1,0 +1,49 @@
+CROP
+
+from PIL import Image
+im = Image.open(r"C:/Users/User/Documents/Python Scripts/moon.jpg")
+width, height = im.size
+left = 5
+top = height / 4
+right = 164
+bottom = 3 * height / 4
+im1 = im.crop((left, top, right, bottom))
+im1.show()
+output can be croped
+
+NEW
+
+import PIL
+im = PIL.Image.new(mode="RGB", size=(100, 100))
+im.show()
+output:new image can be created
+
+import PIL
+im = PIL.Image.new(mode="RGB", size=(200, 100),color = (153, 153, 2055))
+im.show()
+
+SLIT
+
+from PIL import Image
+im = Image.open(r"C:/Users/User/Documents/Python Scripts/sun.jpg")
+im1 = Image.Image.split(im)
+im1[0].show()
+im1[1].show()
+im1[2].show()
+OUTPUT:shows individual images
+
+SAVE
+
+from PIL import Image 
+import PIL 
+im1 = Image.open(r"C:/Users/User/Documents/Python Scripts/sun.jpg")
+im1 = im1.save("veena.jpg")
+output:images will be saved under given extension.
+
+QUANTISE
+from PIL import Image 
+import PIL 
+im1 = Image.open(r"C:/Users/User/Documents/Python Scripts/sun.jpg") 
+im1 = im1.quantize(256) 
+im1.show() 
+output:converts to p to given colors. 
