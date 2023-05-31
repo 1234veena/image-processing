@@ -1,0 +1,35 @@
+UP SAMPLING
+
+import cv2
+image=cv2.imread("C:/Users/User/Documents/Python Scripts/sun.jpg")
+print("size of image before pyrUp: ",image.shape)
+cv2.imshow("im1",image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+image=cv2.pyrUp(image)
+print("size of image after pyrUp: ",image.shape)
+cv2.imshow("UpSample",image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+OUTPUT:
+size of image before pyrUp:  (183, 275, 3)
+size of image after pyrUp:  (366, 550, 3)
+IMAGE BECOMES LARGE
+
+DOWN SAMPLING 
+
+import cv2
+image=cv2.imread("C:/Users/User/Documents/Python Scripts/sun.jpg")
+print("size of image before pyrDown: ",image.shape)
+cv2.imshow("im1",image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+image=cv2.pyrDown(image)
+print("size of image after pyrDown: ",image.shape)
+cv2.imshow("DownSample",image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+OUTPUT:
+size of image before pyrDown:  (183, 275, 3)
+size of image after pyrDown:  (92, 138, 3)
+IMAGE BECOMES SAMLLER
