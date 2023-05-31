@@ -1,0 +1,14 @@
+BRIGHTNESS
+
+from PIL import Image, ImageEnhance
+im = Image.open(r"C:/Users/User/Documents/Python Scripts/moon.jpg")
+im3 = ImageEnhance.Brightness(im)
+im3.enhance(2.0).show()
+
+CONTRAST
+
+from PIL import Image, ImageEnhance
+im = Image.open(r"C:/Users/User/Documents/Python Scripts/moon.jpg")
+im3 = ImageEnhance.Contrast(im)
+im3.enhance(3.0).show()
+
