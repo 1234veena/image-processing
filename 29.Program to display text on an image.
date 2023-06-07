@@ -1,0 +1,47 @@
+using pil
+
+from PIL import Image
+from PIL import ImageDraw
+img = Image.open(r"C:/Users/User/Documents/Python Scripts/sun.jpg")
+I1 = ImageDraw.Draw(img)
+I1.text((28, 36), "Good Morning", fill=(250, 0, 0))
+img.show()
+img.save("car2.png")
+
+using cv2
+
+import numpy as np
+import cv2
+image = cv2.imread(r"C:/Users/User/Documents/Python Scripts/sun.jpg",cv2.IMREAD_UNCHANGED)
+position = (10,50)
+cv2.putText(
+     image, 
+     "Good morning",
+     position,
+     cv2.FONT_ITALIC,
+     1, 
+     (0,0,0), 
+     10) #font stroke
+cv2.imwrite('output.png', image)
+cv2.imshow('veena.jpg',image)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+PUMA
+
+import numpy as np
+import cv2
+image = cv2.imread('C:/Users/User/Downloads/tshirts.jpg',cv2.IMREAD_UNCHANGED)
+position = (170,170)
+cv2.putText(
+     image, 
+     "PUMA",
+     position,
+     cv2.FONT_HERSHEY_COMPLEX,
+     0.5, 
+     (0,0,0), 
+     2) #font stroke
+cv2.imwrite('output.png', image)
+cv2.imshow('veena.jpg',image)
+cv2.waitKey()
+cv2.destroyAllWindows()
