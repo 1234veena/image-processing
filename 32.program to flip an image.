@@ -1,0 +1,11 @@
+Fliping vertical and horizontal
+
+import PIL
+from PIL import Image
+im = Image.open(r"C:/Users/User/Downloads/puma.jpg")
+im.show()
+#flip image
+ver= im.transpose(PIL.Image.FLIP_LEFT_RIGHT)
+ver.show()
+hor = im.transpose(PIL.Image.FLIP_TOP_BOTTOM)
+hor.show()
