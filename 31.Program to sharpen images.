@@ -1,0 +1,10 @@
+using pil
+
+from PIL import Image, ImageFilter
+# Open the image
+image = Image.open("C:/Users/User/Documents/Python Scripts/sun.jpg")
+image.show()
+# Sharpen the image
+sharpened_image = image.filter(ImageFilter.SHARPEN)
+# Save the resulting image
+sharpened_image.show()
