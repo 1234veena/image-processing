@@ -9,3 +9,18 @@ ver= im.transpose(PIL.Image.FLIP_LEFT_RIGHT)
 ver.show()
 hor = im.transpose(PIL.Image.FLIP_TOP_BOTTOM)
 hor.show()
+
+using cv2
+
+import cv2
+# read input image
+img = cv2.imread(r"C:/Users/User/Documents/Python Scripts/sun.jpg")
+cv2.imshow("original image",img)
+# flip the image by vertically
+img_v = cv2.flip(img, 0)
+img_h = cv2.flip(img, 1)
+# display the rotated image
+cv2.imshow("Vertical Flip", img_v)
+cv2.imshow("Horizontal Flip", img_h)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
