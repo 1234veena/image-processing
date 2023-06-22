@@ -1,0 +1,90 @@
+Translation:
+
+import numpy as np
+import cv2 as cv
+img = cv.imread(r"C:/Users/User/Documents/Python Scripts/moon.jpg", 0)
+rows, cols = img.shape
+M = np.float32([[1, 0, 50], [0, 1, 10]])
+dst = cv.warpAffine(img, M, (cols, rows))
+cv.imshow('img', dst)
+cv.waitKey(0)
+cv.destroyAllWindows()
+
+Reflection:
+
+import numpy as np
+import cv2 as cv
+img = cv.imread(r"C:/Users/User/Documents/Python Scripts/moon.jpg", 0)
+rows, cols = img.shape
+M = np.float32([[1,  0, 0],
+                [0, -1, rows],     #row
+                [0,  0, 1]])
+M1 = np.float32([[-1, 0, cols], [0, 1, 0], [0, 0, 1]])  #column
+reflected_img = cv.warpPerspective(img, M,
+                                   (int(cols),
+                                    int(rows)))
+reflected_img1 = cv.warpPerspective(img, M1,
+                                   (int(cols),
+                                    int(rows)))
+cv.imshow('img', reflected_img)
+cv.waitKey(0)
+cv.imshow('img',reflected_img1)
+cv.waitKey(0)
+cv.destroyAllWindows()
+
+Rotation:
+
+import numpy as np
+import cv2 as cv
+img = cv.imread(r"C:/Users/User/Documents/Python Scripts/moon.jpg", 0)
+rows, cols = img.shape
+M = np.float32([[1,  0, 0], [0, -1, rows], [0,  0, 1]])
+img_rotation = cv.warpAffine(img,
+                             cv.getRotationMatrix2D((cols/2, rows/2),
+                                                    60, 0.6),
+                             (cols, rows))
+cv.imshow('img', img_rotation)
+cv.waitKey(0)
+cv.destroyAllWindows()
+
+Scaling:
+
+import numpy as np
+import cv2 as cv
+img = cv.imread(r"C:/Users/User/Documents/Python Scripts/moon.jpg", 0)
+rows, cols = img.shape
+img_shrinked = cv.resize(img, (400, 200),
+                         interpolation=cv.INTER_AREA)
+cv.imshow('img', img_shrinked)
+img_enlarged = cv.resize(img_shrinked, None,
+                         fx=1.5, fy=1.5,
+                         interpolation=cv.INTER_CUBIC)
+cv.imshow('img', img_enlarged)
+cv.waitKey(0)
+cv.destroyAllWindows()
+
+Cropping:
+
+import numpy as np
+import cv2 as cv
+img = cv.imread(r"C:/Users/User/Documents/Python Scripts/moon.jpg", 0)
+cropped_img = img[100:600, 100:600]
+cv.imshow('cropped_out.jpg', cropped_img)
+cv.waitKey(0)
+cv.destroyAllWindows()
+
+Shearing x axis and y axis:
+
+import numpy as np
+import cv2 as cv
+img = cv.imread(r"C:/Users/User/Documents/Python Scripts/moon.jpg", 0)
+rows, cols = img.shape
+M = np.float32([[1, 0.5, 0], [0, 1, 0], [0, 0, 1]]) #x axis
+M1= np.float32([[1,   0, 0], [0.5, 1, 0], [0,   0, 1]]) #y axis
+sheared_img = cv.warpPerspective(img, M, (int(cols*1.5), int(rows*1.5)))
+sheared_img1 = cv.warpPerspective(img, M1, (int(cols*1.5), int(rows*1.5)))
+cv.imshow('img', sheared_img)
+cv.waitKey(0)
+cv.imshow('img1',sheared_img1 )
+cv.waitKey(0)
+cv.destroyAllWindows()
