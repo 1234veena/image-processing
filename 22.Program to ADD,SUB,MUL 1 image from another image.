@@ -1,23 +1,24 @@
-Add
 
-from PIL import Image, ImageChops 
-im1 = Image.open(r"C:/Users/User/Documents/Python Scripts/moon.jpg")  
-im2 = Image.open(r"C:/Users/User/Documents/Python Scripts/sun.jpg") 
-im3 = ImageChops.add(im1, im2, scale = 1.0, offset = 2) 
-im3.show() 
+import cv2
+im1=cv2.imread(r"C:/Users/User/Downloads/img1.png")
+cv2.imshow('im1',im1)
+cv2.waitKey(0)
+im2=cv2.imread(r"C:/Users/User/Downloads/img2.png")
+cv2.imshow('im2',im2)
+cv2.waitKey(0)
+add=im1+im2  #add
+sub=im1-im2  #sub
+mul=im1*im2  #mul
+div=im1/im2  #div
+cv2.imshow('addition',add)
+cv2.waitKey(0)
+cv2.imshow('subtraction',sub)
+cv2.waitKey(0)
+cv2.imshow('multiplication',mul)
+cv2.waitKey(0)
+cv2.imshow('division',div)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
-Sub
 
-from PIL import Image, ImageChops
-im1 = Image.open(r"C:/Users/User/Documents/Python Scripts/moon.jpg")  
-im2 = Image.open(r"C:/Users/User/Documents/Python Scripts/sun.jpg") 
-im3 = ImageChops.subtract(image1 = im1, image2 = im2)
-im3.show()
 
-Mul
-
-from PIL import Image, ImageChops
-im1 = Image.open(r"C:/Users/User/Documents/Python Scripts/moon.jpg")  
-im2 = Image.open(r"C:/Users/User/Documents/Python Scripts/sun.jpg")   
-im3 = ImageChops.multiply(im1, im2)
-im3.show()
