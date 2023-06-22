@@ -20,5 +20,37 @@ cv2.imshow('division',div)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
+Matplot representation
+import cv2
+from matplotlib import pyplot as plt
 
+im1=cv2.imread(r"C:/Users/User/Downloads/img1.png")
+plt.title('im1')
+plt.imshow(im1)
+plt.show()
+
+im2=cv2.imread(r"C:/Users/User/Downloads/img2.png")
+plt.title('im2')
+plt.imshow(im2)
+plt.show()
+
+add=im1+im2
+plt.title('add')
+plt.imshow(add)
+plt.show()
+
+sub=im1-im2
+plt.title('sub')
+plt.imshow(sub)
+plt.show()
+
+mul=im1*im2
+plt.title('mul')
+plt.imshow(mul)
+plt.show()
+
+div=im1/im2
+plt.title('div')
+plt.imshow(div)
+plt.show()
 
